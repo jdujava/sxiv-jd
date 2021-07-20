@@ -18,8 +18,8 @@ enum {
  * (first/last value is used as min/max zoom level)
  */
 static const float zoom_levels[] = {
-	 12.5,  25.0,  50.0,  75.0,
-	100.0, 150.0, 200.0, 400.0, 800.0
+	 12.5,  25.0,  50.0,  75.0, 80.0, 90.1,
+	100.0, 110.0, 120.0, 130.0, 140.0, 150.0, 160.0, 170.0, 180.0, 190.0, 200.0, 400.0, 800.0
 };
 
 /* default slideshow delay (in sec, overwritten via -S option): */
@@ -120,10 +120,10 @@ static const keymap_t keys[] = {
 	{ 0,            XK_Up,            i_scroll,             DIR_UP },
 	{ 0,            XK_l,             i_scroll,             DIR_RIGHT },
 	{ 0,            XK_Right,         i_scroll,             DIR_RIGHT },
-	{ 0,            XK_H,             i_scroll_to_edge,     DIR_LEFT },
-	{ 0,            XK_J,             i_scroll_to_edge,     DIR_DOWN },
-	{ 0,            XK_K,             i_scroll_to_edge,     DIR_UP },
-	{ 0,            XK_L,             i_scroll_to_edge,     DIR_RIGHT },
+	{ 0,            XK_H,             i_navigate,           -1 },
+	{ 0,            XK_J,             g_zoom,               -1 },
+	{ 0,            XK_K,             g_zoom,               +1 },
+	{ 0,            XK_L,             i_navigate,           +1 },
 	{ 0,            XK_equal,         i_set_zoom,           100 },
 	{ 0,            XK_w,             i_fit_to_win,         SCALE_DOWN },
 	{ 0,            XK_W,             i_fit_to_win,         SCALE_FIT },
