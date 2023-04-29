@@ -1,3 +1,10 @@
+My fork of `sxiv`.
+
+To set upstream remote to original sxiv repo:
+```sh
+git remote add upstream git@github.com:xyb3rt/sxiv.git
+```
+
 ![sxiv](http://xyb3rt.github.io/sxiv/img/logo.png "sxiv")
 
 **Simple X Image Viewer**
